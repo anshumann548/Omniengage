@@ -36,3 +36,4 @@ public class Nodes {
 		driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[1]/div/div[1]/div[3]/div/div/button\n")).click();
 		}
 }
+//Omni status have been cancelled
