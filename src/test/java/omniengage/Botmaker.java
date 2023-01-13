@@ -9,40 +9,28 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
-@Test
-public class Nodes {
+public class Botmaker {
 	WebDriver driver;
 
 	WebDriverWait wait;
 
-	Nodes() {
+	Botmaker() {
 
 		System.setProperty("webdriver.chrome.driver", "/home/anshumann/Downloads/chromedriver");
 		driver = new ChromeDriver();
 	}
 
-	public void LoginIN() throws InterruptedException {
-		Login obj = new Login();
-		obj.Loginpage();
-
+	@Test(priority = 2)
+	public void BotmakerNode() throws InterruptedException {
+		driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[3]/div[2]/div/div")).click();
+		driver.findElement(By.xpath("//*[@id=\'cb\']")).click();
+		driver.findElement(By.xpath("//*[@id=\'cb\']")).sendKeys("Bot" + Math.random() * 5);
+		driver.findElement(
+				By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[1]/div/div[1]/div[3]/div/div/button\n"))
+				.click();
+		Thread.sleep(5000);
 	}
 
-	public void Botmakerin() throws InterruptedException {
-		Botmaker obj = new Botmaker();
-		obj.BotmakerNode();
-	}
-
-	public void dragndropNodein() throws InterruptedException {
-		dragndropnode obj = new dragndropnode();
-		obj.dragndropNode();
-	}
-
-	public void calculateresultin() throws InterruptedException {
-		Calculateresult obj = new Calculateresult();
-		obj.Calcnode();
-
-	}
 }

@@ -5,7 +5,9 @@
     <classes>
       <class name="omniengage.Nodes">
         <methods>
+          <include name="close"/>
           <include name="Botmaker"/>
+          <include name="dragndropNode"/>
         </methods>
       </class> <!-- omniengage.Nodes -->
     </classes>
