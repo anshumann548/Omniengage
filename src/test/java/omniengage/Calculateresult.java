@@ -11,15 +11,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class Calculateresult {
-WebDriver driver;
-WebDriverWait wait;
+public class Calculateresult extends dragndropnode {
 
-Calculateresult() {
-System.setProperty("webdriver.chrome.driver", "/home/anshumann/Downloads/chromedriver");
-driver = new ChromeDriver();
-}
-    @Test
+    @Test(priority = 4)
 	public void Calcnode() throws InterruptedException {
 		System.out.println("123456789");
 	}

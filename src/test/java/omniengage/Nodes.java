@@ -14,34 +14,14 @@ import org.testng.annotations.Test;
 
 @Test
 public class Nodes {
-	WebDriver driver;
 
-	WebDriverWait wait;
-
-	Nodes() {
-
-		System.setProperty("webdriver.chrome.driver", "/home/anshumann/Downloads/chromedriver");
-		driver = new ChromeDriver();
-	}
-
-	public void LoginIN() throws InterruptedException {
-		Login obj = new Login();
-		obj.Loginpage();
-
-	}
-
-	public void Botmakerin() throws InterruptedException {
-		Botmaker obj = new Botmaker();
-		obj.BotmakerNode();
-	}
-
-	public void dragndropNodein() throws InterruptedException {
-		dragndropnode obj = new dragndropnode();
-		obj.dragndropNode();
-	}
-
-	public void calculateresultin() throws InterruptedException {
+	
+	public void runner() throws InterruptedException {
 		Calculateresult obj = new Calculateresult();
+		//functions called,you have to call the last function at first to create inverse calling hierarchy 
+		obj.Loginpage();
+		obj.BotmakerNode();
+		obj.dragndropNode();
 		obj.Calcnode();
 
 	}
