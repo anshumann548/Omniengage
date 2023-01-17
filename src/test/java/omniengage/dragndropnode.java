@@ -19,16 +19,21 @@ public class dragndropnode extends Botmaker {
 	public void dragndropNode() throws InterruptedException {
 		Thread.sleep(3000);
 
-		WebDriverWait wait = new WebDriverWait(this.driver, Duration.ofMillis(60000));
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'drawflow\']")));
-		WebElement to = this.driver.findElement(By.xpath("//*[@id=\'drawflow\']"));
+		WebDriverWait wait = new WebDriverWait(this.driver, Duration.ofMillis(30000));
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'drawflow\']")));
+	//	WebElement to = this.driver.findElement(By.xpath("//*[@id=\'drawflow\']"));
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'node-5\']/div[3]/div")));
 		WebElement from = this.driver.findElement(By.xpath("//*[@id=\'node-5\']/div[3]/div"));
 
 		Actions act = new Actions(this.driver);
-		act.dragAndDrop(from, to).build().perform();
-		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[3]/div[1]/div[2]/div[7]")).click();
+		act.dragAndDropBy(from, 50,50).build().perform();
+		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[3]/div[1]/div[2]/div[3]")).click();
+		
+		
+		
+		Thread.sleep(5000);
+		
 	}
 
 }

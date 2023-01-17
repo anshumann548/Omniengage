@@ -20,7 +20,8 @@ public class Botmaker extends Login{
 
 	@Test(priority = 2)
 	public void BotmakerNode() throws InterruptedException {
-		
+	WebDriverWait wait = new WebDriverWait(this.driver, Duration.ofMillis(30000));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[3]/div[2]/div/div")));
 		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[3]/div[2]/div/div")).click();
 		this.driver.findElement(By.xpath("//*[@id=\'cb\']")).click();
 		this.driver.findElement(By.xpath("//*[@id=\'cb\']")).sendKeys("Bot" + Math.random() * 5);

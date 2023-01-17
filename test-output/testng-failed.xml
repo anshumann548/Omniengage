@@ -5,7 +5,7 @@
     <classes>
       <class name="omniengage.Nodes">
         <methods>
-          <include name="calculateresultin"/>
+          <include name="controller"/>
         </methods>
       </class> <!-- omniengage.Nodes -->
     </classes>

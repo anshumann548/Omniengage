@@ -27,7 +27,7 @@
 			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[4]/div[1]/input"))
 					.sendKeys("Pass@123");
 			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[5]/input")).click();
-			Thread.sleep(5000);
+			
 		}
 
 	}
