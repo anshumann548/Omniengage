@@ -88,7 +88,7 @@ public class Nodefiller extends dragndropnode {
 		
 		robo.keyPress(KeyEvent.VK_ENTER);
 		robo.keyRelease(KeyEvent.VK_ENTER);
-
+Thread.sleep(5000);
 	}
 
 }
