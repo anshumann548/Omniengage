@@ -45,7 +45,12 @@ public class dragndropnode extends Botmaker {
 
    		 act.dragAndDropBy(fromforcalc, -500,50).build().perform();
     	  this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[3]/div[1]/div[2]/div[7]")).click();
-		
+
+
+    	  
+    	  
+    	  
+    	  
 		Thread.sleep(5000);
 		
 	}
