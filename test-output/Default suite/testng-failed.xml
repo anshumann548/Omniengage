@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="omniengage.Botsolver">
+      <class name="omniengage.Nodes">
         <methods>
-          <include name="botsolver"/>
+          <include name="controller"/>
         </methods>
-      </class> <!-- omniengage.Botsolver -->
+      </class> <!-- omniengage.Nodes -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

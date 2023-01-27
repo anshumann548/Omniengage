@@ -38,7 +38,7 @@ public void livebotopener () throws AWTException, InterruptedException
 	robo.keyPress(KeyEvent.VK_ENTER);
 	robo.keyRelease(KeyEvent.VK_ENTER);
 	
-	Thread.sleep(2000);
+	Thread.sleep(3000);
 	
 	robo.keyPress(KeyEvent.VK_ENTER);
 	robo.keyRelease(KeyEvent.VK_ENTER);
