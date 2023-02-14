@@ -18,6 +18,7 @@ public class Nodes {
 		obj.BotmakerNode();
 		obj.dragndropNode();
 		obj.inserter();
+		
 		obj.livebotopener();
 		obj.botsolver();
 		obj.audienceopener();
