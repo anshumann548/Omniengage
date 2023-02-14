@@ -43,5 +43,6 @@ public void livebotopener () throws AWTException, InterruptedException
 	robo.keyPress(KeyEvent.VK_ENTER);
 	robo.keyRelease(KeyEvent.VK_ENTER);
 	
+//21-45 Pasting the copied link into the new tab	
     }
 }

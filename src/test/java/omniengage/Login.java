@@ -14,16 +14,22 @@
 		
 		@Test
 		public void Loginpage() throws InterruptedException {
-			System.setProperty("webdriver.chrome.driver", "/home/anshumann/Downloads/chromedriver");
-			driver = new ChromeDriver();
-			this.driver.navigate().to("https://app.omniengage.co/login");
-			this.driver.manage().window().maximize();
-			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[3]/div/input"))
-					.sendKeys("anshumann.singh@venturepact.com");
-			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[4]/div[1]/input"))
-					.sendKeys("Pass@123");
-			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[5]/input")).click();
 			
+			System.setProperty("webdriver.chrome.driver", "/home/anshumann/Downloads/chromedriver");
+			driver = new ChromeDriver(); //initializing driver
+		
+			
+			this.driver.navigate().to("https://app.omniengage.co/login"); //navigating to url
+			
+			this.driver.manage().window().maximize(); // maximizing wondow
+			
+			
+			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[3]/div/input")).sendKeys("anshumann.singh@venturepact.com");
+			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[4]/div[1]/input")).sendKeys("Pass@123");
+			//Sending username and password
+			
+			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[5]/input")).click();
+			//Clicking submit
 		}
 
 	}
