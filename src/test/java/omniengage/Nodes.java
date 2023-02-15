@@ -9,7 +9,7 @@ public class Nodes {
 
 	public void controller() throws InterruptedException, AWTException {
 
-		Audiencetrigger obj = new Audiencetrigger();
+		Chatanalytics obj = new Chatanalytics();
 
 		// functions called,you have to call the last function at first to create
 		// inverse calling hierarchy
@@ -18,10 +18,10 @@ public class Nodes {
 		obj.BotmakerNode();
 		obj.dragndropNode();
 		obj.inserter();
-		
 		obj.livebotopener();
 		obj.botsolver();
 		obj.audienceopener();
 		obj.rfopener();
+	    obj.Chatcheck();
 	}
 }

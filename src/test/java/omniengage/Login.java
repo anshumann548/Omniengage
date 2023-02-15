@@ -21,12 +21,12 @@
 			
 			this.driver.navigate().to("https://app.omniengage.co/login"); //navigating to url
 			
-			this.driver.manage().window().maximize(); // maximizing wondow
+			this.driver.manage().window().maximize(); // maximizing window
 			
 			
 			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[3]/div/input")).sendKeys("anshumann.singh@venturepact.com");
 			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[4]/div[1]/input")).sendKeys("Pass@123");
-			//Sending username and password
+			//Sending user name and password
 			
 			this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div[2]/form/div/div[5]/input")).click();
 			//Clicking submit
