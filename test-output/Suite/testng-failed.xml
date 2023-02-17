@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="9" parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="9" parallel="methods" name="Test(failed)">
+    <classes>
+      <class name="omniengage.Botmaker">
+        <methods>
+          <include name="controller"/>
+        </methods>
+      </class> <!-- omniengage.Botmaker -->
+      <class name="omniengage.livebot">
+        <methods>
+          <include name="controller"/>
+        </methods>
+      </class> <!-- omniengage.livebot -->
+      <class name="omniengage.audiencenode">
+        <methods>
+          <include name="controller"/>
+          <include name="botsolver"/>
+          <include name="audienceopener"/>
+        </methods>
+      </class> <!-- omniengage.audiencenode -->
+      <class name="omniengage.Login">
+        <methods>
+          <include name="controller"/>
+        </methods>
+      </class> <!-- omniengage.Login -->
+      <class name="omniengage.Nodefiller">
+        <methods>
+          <include name="controller"/>
+        </methods>
+      </class> <!-- omniengage.Nodefiller -->
+      <class name="omniengage.Chatanalytics">
+        <methods>
+          <include name="rfopener"/>
+          <include name="controller"/>
+          <include name="botsolver"/>
+          <include name="audienceopener"/>
+          <include name="Chatcheck"/>
+        </methods>
+      </class> <!-- omniengage.Chatanalytics -->
+      <class name="omniengage.dragndropnode">
+        <methods>
+          <include name="controller"/>
+        </methods>
+      </class> <!-- omniengage.dragndropnode -->
+      <class name="omniengage.Botsolver">
+        <methods>
+          <include name="controller"/>
+          <include name="botsolver"/>
+        </methods>
+      </class> <!-- omniengage.Botsolver -->
+      <class name="omniengage.Audiencetrigger">
+        <methods>
+          <include name="rfopener"/>
+          <include name="controller"/>
+          <include name="botsolver"/>
+          <include name="audienceopener"/>
+        </methods>
+      </class> <!-- omniengage.Audiencetrigger -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-15T12:49:51 IST" name="Default suite" finished-at="2023-02-15T12:51:39 IST" duration-ms="107906">
+  <suite started-at="2023-02-17T12:31:10 IST" name="Default suite" finished-at="2023-02-17T12:32:58 IST" duration-ms="107556">
     <groups>
     </groups>
-    <test started-at="2023-02-15T12:49:51 IST" name="Default test" finished-at="2023-02-15T12:51:39 IST" duration-ms="107906">
+    <test started-at="2023-02-17T12:31:10 IST" name="Default test" finished-at="2023-02-17T12:32:58 IST" duration-ms="107556">
       <class name="omniengage.Nodes">
-        <test-method signature="controller()[pri:0, instance:omniengage.Nodes@6c130c45]" started-at="2023-02-15T12:49:51 IST" name="controller" finished-at="2023-02-15T12:51:39 IST" duration-ms="107878" status="PASS">
+        <test-method signature="controller()[pri:0, instance:omniengage.Nodes@6c130c45]" started-at="2023-02-17T12:31:10 IST" name="controller" finished-at="2023-02-17T12:32:58 IST" duration-ms="107532" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- controller -->

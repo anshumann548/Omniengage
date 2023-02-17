@@ -31,8 +31,7 @@ public void	Chatcheck() throws InterruptedException{
     JavascriptExecutor js = (JavascriptExecutor) driver ;
     js.executeScript("arguments[0].scrollIntoView(true);", ele);
 
-    driver.findElement(By.xpath("//*[@id=\'on-hover\']/li[113]")).click();
-          }
+        }
 	
 	
 }

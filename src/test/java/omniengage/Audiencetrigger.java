@@ -54,7 +54,7 @@ public class Audiencetrigger extends audiencenode {
 		this.driver.findElement(By.xpath("//*[@class='sendEmail-head']")).click();  // clicking over email receiver's field
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@class='rightSidebar-tarea condition']"))
-				.sendKeys("anshumann.singh@venturepact.com");   // email reciever config setting
+				.sendKeys("anshumann548@gmail.com");   // email reciever config setting
 
 		Robot robo = new Robot();
 
@@ -78,7 +78,7 @@ public class Audiencetrigger extends audiencenode {
 		for (WebElement element : configlist) {
 
 			String desiredconfig = element.getText();
-			String stm = "gmailsmtp";
+			String stm = "smtp";
 
 			if (desiredconfig.equalsIgnoreCase(stm)) {
 				element.click();   //comparing all elements with desired config
@@ -94,13 +94,12 @@ public class Audiencetrigger extends audiencenode {
 		//81-85 waiting for the save configuration button and saving it 
 		
 		
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div/div[4]")).click(); // Publishing bot
+		
 
 		this.driver.findElement(By.xpath("//*[@id=\"phone\"]/div/div/div[1]/div/div[2]")).click();  // clicking over node normally
 		Thread.sleep(3000);
 		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div[2]/div/button[1]")).click();// first
-																													// node
-																													// maker
+																													// node// maker
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[2]/div/div[1]/div[2]/div/div"))
 				.click();  //clicking over field to get expanded dd
@@ -113,10 +112,10 @@ public class Audiencetrigger extends audiencenode {
 		for (WebElement element : botlist) {
 			String desiredbot = element.getText();
 
-			if (desiredbot.contains("bot0.9807084275897515 (Bot)")) {
+			if (desiredbot.contains("bot2.7955767116867887 (Bot)")) {
 				element.click();
 				break;
-				// Whole loop and if statement looking for desired bot
+				// Whole loop and if statement looking for desired b o t
 			}
 		}
 
@@ -125,6 +124,10 @@ public class Audiencetrigger extends audiencenode {
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[2]/div/div[2]/div[2]")).click();
 		// Selecting time to send campaign
 
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div/div[4]")).click(); // Publishing bot
+	
+		Thread.sleep(2000);
+		
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[2]/div/button[2]\n")).click();
 		// Sending campaign
 	}
