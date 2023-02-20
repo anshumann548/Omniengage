@@ -12,7 +12,6 @@ public class livebot extends Nodefiller {
 @Test(priority=5)
 public void livebotopener () throws AWTException, InterruptedException
 {
-	this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[2]/div[2]/div/div[4]")).click();
 	
 	this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[2]/div[2]/div/div[3]/div")).click();
 	((JavascriptExecutor) driver).executeScript("window.open()");// launching a new tab

@@ -22,9 +22,10 @@ public class audiencenode extends Botsolver {
 
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[1]/div[2]/div[2]/ul/li[1]/a")).click(); 
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div[1]/div[2]/div[2]/ul/li[1]/a")).click(); //GETTING BACK TO DASH-BOARD
 		
-		// roaming into audience node
+		
+		
 	}
 
 }
