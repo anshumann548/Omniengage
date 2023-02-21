@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,  1 skipped,  </span>
+                    <span class="method-stats">3 methods, 1 failed,  1 skipped,  1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,11 +102,6 @@
                       <a href="#" panel-name="suite-TestSuite" class="show-methods failed suite-TestSuite"> (show)</a> <!-- show-methods failed suite-TestSuite -->
                     </span>
                     <div class="method-list-content failed suite-TestSuite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-TestSuite" title="omniengage.Nodes" class="method navigator-link" hash-for-method="controller">controller</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-TestSuite" title="omniengage.Nodes" class="method navigator-link" hash-for-method="controller">controller</a> <!-- method navigator-link -->
@@ -127,6 +122,20 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-TestSuite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-TestSuite" class="hide-methods passed suite-TestSuite"> (hide)</a> <!-- hide-methods passed suite-TestSuite -->
+                      <a href="#" panel-name="suite-TestSuite" class="show-methods passed suite-TestSuite"> (show)</a> <!-- show-methods passed suite-TestSuite -->
+                    </span>
+                    <div class="method-list-content passed suite-TestSuite">
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-TestSuite" title="omniengage.Nodes" class="method navigator-link" hash-for-method="controller">controller</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-TestSuite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -149,13 +158,14 @@
                   <a name="controller">
                   </a> <!-- controller -->
                   <span class="method-name">controller</span>
-                  <div class="stack-trace">org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: (1303, 83) is out of bounds of viewport width (1280) and height (851)
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: Element &lt;span class=&quot;toggle round&quot;&gt; could not be scrolled into view
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;anshumann-Aspire-A715-42G&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-56-generic&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [b850777e-c845-44e0-af57-3402811fe681, actions {actions=[org.openqa.selenium.interactions.Sequence@3b6ca783]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:debuggerAddress: 127.0.0.1:53720, moz:geckodriverVersion: 0.32.2, moz:headless: false, moz:platformVersion: 5.15.0-56-generic, moz:processID: 67196, moz:profile: /tmp/rust_mozprofile5TbJFs, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://127.0.0.1:53720/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b850777e-c845-44e0-af57-3402811fe681
+Command: [776bcd88-51c5-43c0-9286-82d6c59a673c, clickElement {id=b53e9a42-3a02-47f8-80c5-c9747a1694b9}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:debuggerAddress: 127.0.0.1:56429, moz:geckodriverVersion: 0.32.2, moz:headless: false, moz:platformVersion: 5.15.0-56-generic, moz:processID: 55606, moz:profile: /tmp/rust_mozprofilecJN1jM, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://127.0.0.1:56429/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on LINUX (776bcd88-51c5-43c0-9286-82d6c59a673c)] -&gt; xpath: //*[@id=&apos;root&apos;]/div/div[3]/div[4]/div/div/div[2]/div[4]/div/div/label/span]
+Session ID: 776bcd88-51c5-43c0-9286-82d6c59a673c
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -163,50 +173,16 @@ Session ID: b850777e-c845-44e0-af57-3402811fe681
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:615)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-	at omniengage.dragndropnode.dragndropNode(dragndropnode.java:30)
-	at omniengage.Nodes.controller(Nodes.java:76)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at omniengage.Nodefiller.inserter(Nodefiller.java:19)
+	at omniengage.Nodes.controller(Nodes.java:77)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 ... Removed 23 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="controller">
-                  </a> <!-- controller -->
-                  <span class="method-name">controller</span>
-                  <div class="stack-trace">java.lang.AssertionError: The following asserts failed:
-	Monthly pricing is not matching expected [Recommended Plus plan Scale up with ease Starts at $22 /month Upgrade Min. Bill amount $22/month 5000 monthly push web notification 10,000 monthly emails] but found [Recommended
-Plus plan
-Scale up with ease
-Starts at
-$22
-/month
-Upgrade
-Min. Bill amount $22/month
-5000 monthly push web notification
-10,000 monthly emails],
-	Monthly pricing is not matching expected [Enterprise plan Unleash your full potential Custom Contact us Upgrade to Plus or Enterprise to enjoy more features. Perfect for businesses with high volume requirements Take advantage of special rates and customized plans] but found [Enterprise plan
-Unleash your full potential
-Custom
-Contact us
-Upgrade to Plus or Enterprise to enjoy more features.
-Perfect for businesses with high volume requirements
-Take advantage of special rates and customized plans]
-	at omniengage.Chatanalytics.Chatcheck(Chatanalytics.java:78)
-	at omniengage.Nodes.controller(Nodes.java:82)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 20 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -252,6 +228,21 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEd
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-TestSuite-class-skipped -->
+          <div class="suite-TestSuite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">omniengage.Nodes</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="controller">
+                  </a> <!-- controller -->
+                  <span class="method-name">controller</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-TestSuite-class-passed -->
         </div> <!-- panel TestSuite -->
         <div panel-name="test-xml-TestSuite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -327,11 +318,11 @@ data.addRows(3);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'controller')
 data.setCell(0, 2, 'omniengage.Nodes')
-data.setCell(0, 3, 113952);
+data.setCell(0, 3, 120791);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'controller')
 data.setCell(1, 2, 'omniengage.Nodes')
-data.setCell(1, 3, 21781);
+data.setCell(1, 3, 29642);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'controller')
 data.setCell(2, 2, 'omniengage.Nodes')
@@ -383,19 +374,17 @@ return data;
               </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">controller</span>
-                <span class="method-start">652 ms</span>
+                <span class="method-start">699 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">controller</span>
+                <span class="method-start">6058 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">controller</span>
-                <span class="method-start">6046 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">controller</span>
-                <span class="method-start">7005 ms</span>
+                <span class="method-start">7031 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

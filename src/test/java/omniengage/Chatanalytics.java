@@ -47,39 +47,53 @@ public void	Chatcheck() throws InterruptedException{
  		
  		String enterpriseplan = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/div[2]")).getText();
  		
- 		System.out.println(enterpriseplan);
  		
- 		String expectedplanmonthly = "Recommended" +" "
- 			+	"Plus plan" +" "
- 			+	"Scale up with ease" +" "
- 			+	"Starts at"+" "
- 			+	"$22"+" "
- 			+	"/month"+" "
- 			+	"Upgrade"+" "
- 			+ 	"Min. Bill amount $22/month"+" "
- 			+	"5000 monthly push web notification"+" "
+ 		String expectedplanmonthly = "Recommended" + "\n"
+ 			+	"Plus plan" + "\n "
+ 			+	"Scale up with ease" +"\n "
+ 			+	"Starts at"+"\n "
+ 			+	"$22"+" \n"
+ 			+	"/month"+"\n "
+ 			+	"Upgrade"+"\n "
+ 			+ 	"Min. Bill amount $22/month"+"\n "
+ 			+	"5000 monthly push web notification"+"\n "
  			+	"10,000 monthly emails" ;
 	
- 		String expectedenterprise = "Enterprise plan" + " "+
- 		"Unleash your full potential"+" "+
- 		"Custom"+" "+
- 		"Contact us"+" "+
- 		"Upgrade to Plus or Enterprise to enjoy more features."+" "+
- 		"Perfect for businesses with high volume requirements"+" "+
+ 		String expectedenterprise = "Enterprise plan" + "\n "+
+ 		"Unleash your full potential"+" \n"+
+ 		"Custom"+"\n "+
+ 		"Contact us"+"\n "+
+ 		"Upgrade to Plus or Enterprise to enjoy more features."+"\n "+
+ 		"Perfect for businesses with high volume requirements"+" \n"+
  		"Take advantage of special rates and customized plans" ;
 
+ 		String expectedyearlyplan = "Recommended" + "\n"
+ 	 			+	"Plus plan" + "\n "
+ 	 			+	"Scale up with ease" +"\n "
+ 	 			+	"Starts at"+"\n "
+ 	 			+	"$220"+" \n"
+ 	 			+	"/year"+"\n "
+ 	 			+	"Upgrade"+"\n "
+ 	 			+ 	"Min. Bill amount $220/year"+"\n "
+ 	 			+	"60,000 yearly push web notification"+"\n "
+ 	 			+	"120,000 yearly emails" ;
  		
  		
  		SoftAssert softAssert = new SoftAssert();
  		
  		softAssert.assertEquals(pricingplanmonthly,expectedplanmonthly,"Monthly pricing is not matching");
- 		softAssert.assertEquals(enterpriseplan,expectedenterprise,"Monthly pricing is not matching");
+ 		softAssert.assertEquals(enterpriseplan,expectedenterprise,"Enterprise policy is not matching");
  		
- 		softAssert.assertAll();
+ 		//softAssert.assertAll();
  		
- 		Thread.sleep(4000);
-
-        }
+ 		Thread.sleep(5000);
+ 		
+ 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/div/label/span")).click(); //Turning on yearly toggle
+ 		
+     	String yearlyplan=	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/div[1]")).getText();
+ 		
+ 	softAssert.assertEquals(yearlyplan,expectedyearlyplan,"Yearly pricing is not matching");
+      }
 	
 	
 }

@@ -9,14 +9,14 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">TestSuite</th></tr>
-<tr><td><a href="#t0">EdgeTest</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">663</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">FirefoxTest</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">28,797</td><td></td><td></td></tr>
-<tr><td><a href="#t2">ChromeTest</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">120,005</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">0</th><th class="num attn">1</th><th class="num">0</th><th class="num attn">2</th><th class="num">149,465</th><th colspan="2"></th></tr>
+<tr><td><a href="#t0">EdgeTest</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">0</td><td class="num">710</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">FirefoxTest</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">36,681</td><td></td><td></td></tr>
+<tr><td><a href="#t2">ChromeTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">126,855</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num attn">1</th><th class="num">0</th><th class="num attn">1</th><th class="num">164,246</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">EdgeTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">omniengage.Nodes</td><td><a href="#m0">setup</a></td><td rowspan="1">1676894463019</td><td rowspan="1">625</td></tr><tr><th colspan="4">EdgeTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">omniengage.Nodes</td><td><a href="#m1">controller</a></td><td rowspan="1">1676894463671</td><td rowspan="1">0</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">FirefoxTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">omniengage.Nodes</td><td><a href="#m2">controller</a></td><td rowspan="1">1676894470024</td><td rowspan="1">21781</td></tr></tbody>
-<tbody id="t2"><tr><th colspan="4">ChromeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">omniengage.Nodes</td><td><a href="#m3">controller</a></td><td rowspan="1">1676894469065</td><td rowspan="1">113952</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">TestSuite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">EdgeTest &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">omniengage.Nodes</td><td><a href="#m0">setup</a></td><td rowspan="1">1676976290804</td><td rowspan="1">674</td></tr><tr><th colspan="4">EdgeTest &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">omniengage.Nodes</td><td><a href="#m1">controller</a></td><td rowspan="1">1676976291503</td><td rowspan="1">0</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">FirefoxTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">omniengage.Nodes</td><td><a href="#m2">controller</a></td><td rowspan="1">1676976297835</td><td rowspan="1">29642</td></tr></tbody>
+<tbody id="t2"><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">omniengage.Nodes</td><td><a href="#m3">controller</a></td><td rowspan="1">1676976296862</td><td rowspan="1">120791</td></tr></tbody>
 </table>
 <h2>EdgeTest</h2><h3 id="m0">omniengage.Nodes#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>Edge</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Response code 500. Message: unknown error: cannot find msedge binary
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
@@ -66,13 +66,14 @@ Command: [null, newSession {capabilities=[Capabilities {browserName: MicrosoftEd
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 ... Removed 15 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>FirefoxTest</h2><h3 id="m2">omniengage.Nodes#controller</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.interactions.MoveTargetOutOfBoundsException: (1303, 83) is out of bounds of viewport width (1280) and height (851)
+<h2>FirefoxTest</h2><h3 id="m2">omniengage.Nodes#controller</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: Element &lt;span class=&quot;toggle round&quot;&gt; could not be scrolled into view
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;anshumann-Aspire-A715-42G&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-56-generic&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [b850777e-c845-44e0-af57-3402811fe681, actions {actions=[org.openqa.selenium.interactions.Sequence@3b6ca783]}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:debuggerAddress: 127.0.0.1:53720, moz:geckodriverVersion: 0.32.2, moz:headless: false, moz:platformVersion: 5.15.0-56-generic, moz:processID: 67196, moz:profile: /tmp/rust_mozprofile5TbJFs, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://127.0.0.1:53720/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b850777e-c845-44e0-af57-3402811fe681
+Command: [776bcd88-51c5-43c0-9286-82d6c59a673c, clickElement {id=b53e9a42-3a02-47f8-80c5-c9747a1694b9}]
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:debuggerAddress: 127.0.0.1:56429, moz:geckodriverVersion: 0.32.2, moz:headless: false, moz:platformVersion: 5.15.0-56-generic, moz:processID: 55606, moz:profile: /tmp/rust_mozprofilecJN1jM, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://127.0.0.1:56429/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Element: [[FirefoxDriver: firefox on LINUX (776bcd88-51c5-43c0-9286-82d6c59a673c)] -&gt; xpath: //*[@id=&apos;root&apos;]/div/div[3]/div[4]/div/div/div[2]/div[4]/div/div/label/span]
+Session ID: 776bcd88-51c5-43c0-9286-82d6c59a673c
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -80,41 +81,16 @@ Session ID: b850777e-c845-44e0-af57-3402811fe681
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:615)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-	at omniengage.dragndropnode.dragndropNode(dragndropnode.java:30)
-	at omniengage.Nodes.controller(Nodes.java:76)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at omniengage.Nodefiller.inserter(Nodefiller.java:19)
+	at omniengage.Nodes.controller(Nodes.java:77)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 ... Removed 23 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>ChromeTest</h2><h3 id="m3">omniengage.Nodes#controller</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: The following asserts failed:
-	Monthly pricing is not matching expected [Recommended Plus plan Scale up with ease Starts at $22 /month Upgrade Min. Bill amount $22/month 5000 monthly push web notification 10,000 monthly emails] but found [Recommended
-Plus plan
-Scale up with ease
-Starts at
-$22
-/month
-Upgrade
-Min. Bill amount $22/month
-5000 monthly push web notification
-10,000 monthly emails],
-	Monthly pricing is not matching expected [Enterprise plan Unleash your full potential Custom Contact us Upgrade to Plus or Enterprise to enjoy more features. Perfect for businesses with high volume requirements Take advantage of special rates and customized plans] but found [Enterprise plan
-Unleash your full potential
-Custom
-Contact us
-Upgrade to Plus or Enterprise to enjoy more features.
-Perfect for businesses with high volume requirements
-Take advantage of special rates and customized plans]
-	at omniengage.Chatanalytics.Chatcheck(Chatanalytics.java:78)
-	at omniengage.Nodes.controller(Nodes.java:82)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 20 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>ChromeTest</h2><h3 id="m3">omniengage.Nodes#controller</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

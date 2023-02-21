@@ -23,15 +23,4 @@
       </class> <!-- omniengage.Nodes -->
     </classes>
   </test> <!-- FirefoxTest(failed) -->
-  <test thread-count="10" parallel="tests" name="ChromeTest(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="omniengage.Nodes">
-        <methods>
-          <include name="controller"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- omniengage.Nodes -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->
