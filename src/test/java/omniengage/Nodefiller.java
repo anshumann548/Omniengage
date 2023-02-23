@@ -33,6 +33,9 @@ public class Nodefiller extends dragndropnode {
 
 		robo.keyPress(KeyEvent.VK_ENTER);
 		robo.keyRelease(KeyEvent.VK_ENTER);
+
+		Thread.sleep(2000);
+		
 //Saving button node
 		
 		driver.findElement(By.xpath("//*[@id=\'node-7\']/div[2]/div")).click();
@@ -43,7 +46,7 @@ public class Nodefiller extends dragndropnode {
 		WebElement buttonametwo = driver
 				.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[3]/div/div[2]/input[1]"));
 		buttonametwo.sendKeys("b");
-		Thread.sleep(3000);
+	
 		
 		WebElement buttonvaltwo = driver
 				.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[3]/div/div[2]/input[2]"));
@@ -56,6 +59,8 @@ public class Nodefiller extends dragndropnode {
 		robo.keyPress(KeyEvent.VK_ENTER);
 		robo.keyRelease(KeyEvent.VK_ENTER);
 //Saving button node
+		
+		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//*[@id=\'node-8\']/div[2]/div")).click();
 		Thread.sleep(3000);
@@ -80,7 +85,7 @@ public class Nodefiller extends dragndropnode {
 //Saving button node
 
 		
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		
 		driver.findElement(By.xpath("//*[@id=\'phone\']/div/div/div[1]/div")).click();
 		
@@ -107,6 +112,8 @@ public class Nodefiller extends dragndropnode {
 		
 //Saving calculate result node
 		Thread.sleep(2000);
+	
+		
 		
 		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[2]/div[2]/div/div[4]")).click();
 

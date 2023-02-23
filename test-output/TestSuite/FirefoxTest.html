@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Tue Feb 21 16:14:50 IST 2023</td>
+<td>Started on:</td><td>Thu Feb 23 18:09:09 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>36 seconds (36681 ms)</td>
+<tr><td>Total time:</td><td>42 seconds (42719 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,55 +76,32 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='omniengage.Nodes.controller()'><b>controller</b><br>Test class: omniengage.Nodes</td>
-<td><div><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;span class=&quot;toggle round&quot;&gt; could not be scrolled into view
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=&apos;root&apos;]/div/div[3]/div[2]/div[2]/div[3]/div[2]/div/div (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;anshumann-Aspire-A715-42G&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-56-generic&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [776bcd88-51c5-43c0-9286-82d6c59a673c, clickElement {id=b53e9a42-3a02-47f8-80c5-c9747a1694b9}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:debuggerAddress: 127.0.0.1:56429, moz:geckodriverVersion: 0.32.2, moz:headless: false, moz:platformVersion: 5.15.0-56-generic, moz:processID: 55606, moz:profile: /tmp/rust_mozprofilecJN1jM, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://127.0.0.1:56429/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on LINUX (776bcd88-51c5-43c0-9286-82d6c59a673c)] -&gt; xpath: //*[@id=&apos;root&apos;]/div/div[3]/div[4]/div/div/div[2]/div[4]/div/div/label/span]
-Session ID: 776bcd88-51c5-43c0-9286-82d6c59a673c
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at omniengage.Nodefiller.inserter(Nodefiller.java:19)
-	at omniengage.Nodes.controller(Nodes.java:77)
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:debuggerAddress: 127.0.0.1:56704, moz:geckodriverVersion: 0.32.2, moz:headless: false, moz:platformVersion: 5.15.0-56-generic, moz:processID: 122464, moz:profile: /tmp/rust_mozprofileou4XiC, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://127.0.0.1:56704/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ac302558-edec-4db3-b6b1-54ca8aacc8d6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at omniengage.Botmaker.BotmakerNode(Botmaker.java:21)
+	at omniengage.Nodes.controller(Nodes.java:75)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
-... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1262456929", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1262456929'><pre>org.openqa.selenium.ElementNotInteractableException: Element &lt;span class=&quot;toggle round&quot;&gt; could not be scrolled into view
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace430880487", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace430880487'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=&apos;root&apos;]/div/div[3]/div[2]/div[2]/div[3]/div[2]/div/div (tried for 30 second(s) with 500 milliseconds interval)
 Build info: version: &apos;4.4.0&apos;, revision: &apos;e5c75ed026a&apos;
 System info: host: &apos;anshumann-Aspire-A715-42G&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-56-generic&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Command: [776bcd88-51c5-43c0-9286-82d6c59a673c, clickElement {id=b53e9a42-3a02-47f8-80c5-c9747a1694b9}]
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:debuggerAddress: 127.0.0.1:56429, moz:geckodriverVersion: 0.32.2, moz:headless: false, moz:platformVersion: 5.15.0-56-generic, moz:processID: 55606, moz:profile: /tmp/rust_mozprofilecJN1jM, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://127.0.0.1:56429/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Element: [[FirefoxDriver: firefox on LINUX (776bcd88-51c5-43c0-9286-82d6c59a673c)] -&gt; xpath: //*[@id=&apos;root&apos;]/div/div[3]/div[4]/div/div/div[2]/div[4]/div/div/label/span]
-Session ID: 776bcd88-51c5-43c0-9286-82d6c59a673c
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at omniengage.Nodefiller.inserter(Nodefiller.java:19)
-	at omniengage.Nodes.controller(Nodes.java:77)
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 107.0.1, moz:accessibilityChecks: false, moz:buildID: 20221128144904, moz:debuggerAddress: 127.0.0.1:56704, moz:geckodriverVersion: 0.32.2, moz:headless: false, moz:platformVersion: 5.15.0-56-generic, moz:processID: 122464, moz:profile: /tmp/rust_mozprofileou4XiC, moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: LINUX, proxy: Proxy(), se:cdp: ws://127.0.0.1:56704/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: ac302558-edec-4db3-b6b1-54ca8aacc8d6
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
+	at omniengage.Botmaker.BotmakerNode(Botmaker.java:21)
+	at omniengage.Nodes.controller(Nodes.java:75)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -149,7 +126,7 @@ Session ID: 776bcd88-51c5-43c0-9286-82d6c59a673c
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
 	at java.base/java.lang.Thread.run(Thread.java:833)
 </pre></div></td>
-<td>29</td>
+<td>35</td>
 <td>omniengage.Nodes@957e06</td></tr>
 </table><p>
 </body>

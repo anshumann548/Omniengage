@@ -29,10 +29,7 @@ public class Botsolver extends livebot {
 		
 		WebDriverWait wait = new WebDriverWait(this.driver, Duration.ofMillis(30000));
 		
-		Robot robo = new Robot();
-		robo.keyPress(KeyEvent.VK_ENTER);
-		robo.keyRelease(KeyEvent.VK_ENTER); //Welcome page
-		
+	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/button")).click();	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'root\']/div/div/div/div/div/div[3]/div[2]/div/div")));
 		
 		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div/div/div[3]/div[2]/div/div")).click();

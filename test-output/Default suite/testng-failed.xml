@@ -3,11 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="omniengage.Nodes">
+      <class name="omniengage.livebot">
         <methods>
-          <include name="controller"/>
+          <include name="BotmakerNode"/>
+          <include name="dragndropNode"/>
+          <include name="Loginpage"/>
+          <include name="livebotopener"/>
+          <include name="inserter"/>
         </methods>
-      </class> <!-- omniengage.Nodes -->
+      </class> <!-- omniengage.livebot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
