@@ -25,22 +25,22 @@ public class dragndropnode extends Botmaker {
 //Button 1
 		
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'node-6\']/div[2]/div/div[2]/div[2]/div/div")));
-		WebElement fromagain = this.driver.findElement(By.xpath("//*[@id=\'node-6\']/div[2]/div/div[2]/div[2]/div/div"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'node-6\']/div[2]/div/div[2]/div[2]/div/div[2]")));
+		WebElement fromagain = this.driver.findElement(By.xpath("//*[@id=\'node-6\']/div[2]/div/div[2]/div[2]/div/div[2]"));
         act.dragAndDropBy(fromagain, 40, -100).build().perform();
-		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[3]/div[1]/div[2]/div[3]")).click();
+		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[3]/div[1]/div[2]/div[3]")).click(); 
 //Button 2
 		
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'node-7\']/div[2]/div/div[2]/div[2]/div/div")));
-		WebElement fromagainnext = this.driver.findElement(By.xpath("//*[@id=\'node-7\']/div[2]/div/div[2]/div[2]/div/div"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'node-7\']/div[2]/div/div[2]/div[2]/div/div[2]")));
+		WebElement fromagainnext = this.driver.findElement(By.xpath("//*[@id=\'node-7\']/div[2]/div/div[2]/div[2]/div/div[2]"));
         act.dragAndDropBy(fromagainnext, -400, 90).build().perform();
 		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[3]/div[1]/div[2]/div[3]")).click();
 //Button 3
 		
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'node-8\']/div[2]/div/div[2]/div[2]/div/div")));
-		WebElement fromforcalc = this.driver.findElement(By.xpath("//*[@id=\'node-8\']/div[2]/div/div[2]/div[2]/div/div"));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'node-8\']/div[2]/div/div[2]/div[2]/div/div[2]")));
+		WebElement fromforcalc = this.driver.findElement(By.xpath("//*[@id=\'node-8\']/div[2]/div/div[2]/div[2]/div/div[2]"));
         act.dragAndDropBy(fromforcalc, -500, 50).build().perform();
 		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[3]/div[1]/div[2]/div[7]")).click();
 //Result node

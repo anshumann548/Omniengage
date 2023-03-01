@@ -1,12 +1,7 @@
 package omniengage;
 
-import java.time.Duration;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 public class Chatanalytics extends Audiencetrigger 
@@ -23,27 +18,15 @@ public void	Chatcheck() throws InterruptedException{
 	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[4]/div/div/div[2]/div[2]/button[1]")).click();
 	//handling pop up
 	
-	Thread.sleep(3000);
-	
-	
     
-    WebElement ele = new WebDriverWait(driver, Duration.ofSeconds(10)).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'on-hover\']/li[113]")));
-    JavascriptExecutor js = (JavascriptExecutor) driver ;
-    js.executeScript("arguments[0].scrollIntoView(true);", ele);
-    
- // roaming into pricing page
-    
-    
-    Thread.sleep(3000);
-	
- 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[1]/div[1]")).click();
- 		
- 		
- 		driver.findElement(By.xpath("//*[@id=\"logout-user\"]/ul/li[2]/span")).click(); 
- 		
- 		Thread.sleep(4000);
- 		
- 		String pricingplanmonthly = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/div[1]")).getText();
+   driver.navigate().to("https://app.outgrow.chat/settings");	
+   // roaming into pricing page
+   
+   driver.findElement(By.xpath(" //*[@id=\"root\"]/div/div[2]/div[1]/div[2]/ul/li[5]\n")).click();
+   
+   Thread.sleep(4000);
+ 	
+   String pricingplanmonthly = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/div[1]")).getText();
  		
  		String enterpriseplan = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/div[2]")).getText();
  		
@@ -88,7 +71,8 @@ public void	Chatcheck() throws InterruptedException{
  		
  		Thread.sleep(5000);
  		
- 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/div/label/span")).click(); //Turning on yearly toggle
+ 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[2]/div/label/span")).click(); 
+ 		//Turning on yearly toggle
  		
      	String yearlyplan=	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/div[1]")).getText();
  		

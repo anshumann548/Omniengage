@@ -20,7 +20,7 @@ public class Login {
 
 		this.driver.manage().window().maximize(); // maximizing window
 
-		this.driver.navigate().to("https://app.omniengage.co/login"); // navigating to url
+		this.driver.navigate().to("https://app.outgrow.chat/login"); // navigating to url
 
 //		this.driver.manage().window().maximize(); // maximizing window
 

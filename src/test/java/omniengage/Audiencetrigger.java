@@ -7,6 +7,7 @@ import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -54,20 +55,33 @@ public class Audiencetrigger extends audiencenode {
 		this.driver.findElement(By.xpath("//*[@class='sendEmail-head']")).click();  // clicking over email receiver's field
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@class='rightSidebar-tarea condition']"))
-				.sendKeys("anshumann548@gmail.com");   // email reciever config setting
+				.sendKeys("{email}");   // email reciever config setting
 
-		Robot robo = new Robot();
+//		Robot robo = new Robot();
 
-		robo.keyPress(KeyEvent.VK_TAB);
-		robo.keyPress(KeyEvent.VK_A);
-		robo.keyRelease(KeyEvent.VK_A);
-		robo.keyRelease(KeyEvent.VK_TAB); //email subject
+//		robo.keyPress(KeyEvent.VK_TAB);
+//		robo.keyPress(KeyEvent.VK_A);
+//		robo.keyRelease(KeyEvent.VK_A);
+//		robo.keyRelease(KeyEvent.VK_TAB); //email subject
 
-		robo.keyPress(KeyEvent.VK_TAB);
-		robo.keyPress(KeyEvent.VK_A);
-		robo.keyRelease(KeyEvent.VK_A);
-		robo.keyRelease(KeyEvent.VK_TAB);  // email body
+//		robo.keyPress(KeyEvent.VK_TAB);
+//		robo.keyPress(KeyEvent.VK_A);
+//		robo.keyRelease(KeyEvent.VK_A);
+//		robo.keyRelease(KeyEvent.VK_TAB);  // email body
 
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[3]/div[2]/textarea[1]"))
+		.sendKeys("Omniengage mail delivery system ");   //email subject 
+		
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[3]/div[2]/textarea[2]"))
+		.sendKeys("Good morning Omniengage family , This is a test e-mail");   //email body 
+		
+		
+		
+		
+		
+		
+		
+		
 		Thread.sleep(3000);
 
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[4]/div[2]/div")).click(); // clicking over config fields to expand dropdown
@@ -78,7 +92,7 @@ public class Audiencetrigger extends audiencenode {
 		for (WebElement element : configlist) {
 
 			String desiredconfig = element.getText();
-			String stm = "smtp";
+			String stm = "gmailsmtp";
 
 			if (desiredconfig.equalsIgnoreCase(stm)) {
 				element.click();   //comparing all elements with desired config
@@ -89,8 +103,12 @@ public class Audiencetrigger extends audiencenode {
 		wait.until(ExpectedConditions
 				.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[4]/div[3]/button")));
 		
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[4]/div[3]/button")).click();
-		           Thread.sleep(3000);
+		WebElement wb = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[4]/div[3]/button"));
+	
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].click();", wb);
+		
+		Thread.sleep(3000);
 		//81-85 waiting for the save configuration button and saving it 
 		
 		
@@ -112,7 +130,7 @@ public class Audiencetrigger extends audiencenode {
 		for (WebElement element : botlist) {
 			String desiredbot = element.getText();
 
-			if (desiredbot.contains("bot2.7955767116867887 (Bot)")) {
+			if (desiredbot.contains("Botsegment")) {
 				element.click();
 				break;
 				// Whole loop and if statement looking for desired b o t

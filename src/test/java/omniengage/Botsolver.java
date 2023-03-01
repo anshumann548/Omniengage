@@ -25,11 +25,15 @@ public class Botsolver extends livebot {
 
 		driver.switchTo().window(childid); //switching to the child window
 
-		Thread.sleep(4000);
+		Thread.sleep(2000);
 		
 		WebDriverWait wait = new WebDriverWait(this.driver, Duration.ofMillis(30000));
 		
-	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/button")).click();	
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div/div/div/button")));
+		
+	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div/div/div/button")).click();
+	
+	
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'root\']/div/div/div/div/div/div[3]/div[2]/div/div")));
 		
 		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div/div/div/div/div[3]/div[2]/div/div")).click();
