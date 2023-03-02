@@ -16,16 +16,17 @@ public class Nodefiller extends dragndropnode {
 		driver.findElement(By.xpath("//*[@id=\'button_1\']")).click();
 		
         Thread.sleep(3000);
-        driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[2]/div[4]/div/div/label/span")).click();
+        driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div/div[2]/div[2]/div/div")).click();
 		
         WebElement buttoname = driver
-				.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[3]/div/div[2]/input[1]"));
+				.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div/div[3]/div/div/input[1]"));
 		buttoname.sendKeys("a");
 		Thread.sleep(3000);
 		WebElement buttonval = driver
-				.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[3]/div/div[2]/input[2]"));
+				.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div/div[3]/div/div/input[2]"));
 		buttonval.sendKeys("9");
-//Filling button node
+
+		//Filling button node
 		
 		Robot robo = new Robot();
 		robo.keyPress(KeyEvent.VK_TAB);
@@ -41,15 +42,15 @@ public class Nodefiller extends dragndropnode {
 		driver.findElement(By.xpath("//*[@id=\'node-7\']/div[2]/div")).click();
 		
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[2]/div[4]/div/div/label/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div/div[2]/div[2]/div/div")).click();
 		
 		WebElement buttonametwo = driver
-				.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[3]/div/div[2]/input[1]"));
+				.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div/div[3]/div/div/input[1]"));
 		buttonametwo.sendKeys("b");
 	
 		
 		WebElement buttonvaltwo = driver
-				.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[3]/div/div[2]/input[2]"));
+				.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div/div[3]/div/div/input[2]"));
 		buttonvaltwo.sendKeys("9");
 //Filling button node
 
@@ -65,15 +66,15 @@ public class Nodefiller extends dragndropnode {
 		driver.findElement(By.xpath("//*[@id=\'node-8\']/div[2]/div")).click();
 		Thread.sleep(3000);
 		
-		driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[2]/div[4]/div/div/label/span")).click();
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div/div[2]/div[2]/div/div")).click();
 		
 		WebElement buttonamethree = driver
-				.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[3]/div/div[2]/input[1]"));
+				.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div/div[3]/div/div/input[1]"));
 		buttonamethree.sendKeys("c");
 		Thread.sleep(3000);
 		
 		WebElement buttonvalthree = driver
-				.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[3]/div/div[2]/input[2]"));
+				.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div/div[3]/div/div/input[2]"));
 		buttonvalthree.sendKeys("9");
 //Filling button node
 
