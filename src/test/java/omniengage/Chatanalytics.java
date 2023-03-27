@@ -3,7 +3,7 @@ package omniengage;
 
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-import org.testng.asserts.SoftAssert;
+import org.testng.Assert;
 public class Chatanalytics extends Audiencetrigger 
 
 {
@@ -31,43 +31,28 @@ public void	Chatcheck() throws InterruptedException{
  		String enterpriseplan = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/div[2]")).getText();
  		
  		
- 		String expectedplanmonthly = "Recommended" + "\n"
- 			+	"Plus plan" + "\n "
+ 		String expectedplanmonthly = 	"Plus plan" + "\n "
  			+	"Scale up with ease" +"\n "
  			+	"Starts at"+"\n "
  			+	"$22"+" \n"
  			+	"/month"+"\n "
  			+	"Upgrade"+"\n "
- 			+ 	"Min. Bill amount $22/month"+"\n "
- 			+	"5000 monthly push web notification"+"\n "
- 			+	"10,000 monthly emails" ;
-	
- 		String expectedenterprise = "Enterprise plan" + "\n "+
- 		"Unleash your full potential"+" \n"+
- 		"Custom"+"\n "+
- 		"Contact us"+"\n "+
- 		"Upgrade to Plus or Enterprise to enjoy more features."+"\n "+
- 		"Perfect for businesses with high volume requirements"+" \n"+
- 		"Take advantage of special rates and customized plans" ;
-
- 		String expectedyearlyplan = "Recommended" + "\n"
- 	 			+	"Plus plan" + "\n "
- 	 			+	"Scale up with ease" +"\n "
- 	 			+	"Starts at"+"\n "
- 	 			+	"$220"+" \n"
- 	 			+	"/year"+"\n "
- 	 			+	"Upgrade"+"\n "
- 	 			+ 	"Min. Bill amount $220/year"+"\n "
- 	 			+	"60,000 yearly push web notification"+"\n "
- 	 			+	"120,000 yearly emails" ;
+ 			+	"5000 monthly push web notifications"+"\n "
+ 			+	"10,000 monthly emails"+"\n "
+ 		    + 	"A/B testing"+"\n "
+			+	"Add-ons"+"\n "
+			+	"$3 for every 1000 extra monthly push web notifications" +"\n "
+			+	"$3 for every 1000 extra monthly emails" +"\n " 
+ 		    + "View More" ;
  		
+ 		String expectedenterprise = "EnterpriseplanUnleashyourfullpotentialCustomContactusPerfect for businesses with highvolumerequirementsTakeadvantageofspecialratesandcustomizedplansOver20usersAccess to all featuresPriority support" ;
  		
- 		SoftAssert softAssert = new SoftAssert();
+ 		String expectedyearlyplan = 
+ 				"PlusplanScaleupwitheaseStartsat$220/yearUpgrade60,000yearlypushwebnotifications120,000yearlyemailsA/BtestingAdd-ons$30forevery12,000extrayearlypushwebnotifications$30forevery12,000extrayearlyemailsViewMore";
  		
- 		softAssert.assertEquals(pricingplanmonthly,expectedplanmonthly,"Monthly pricing is not matching");
- 		softAssert.assertEquals(enterpriseplan,expectedenterprise,"Enterprise policy is not matching");
+ 		Assert.assertEquals(removeWhiteSpaces(pricingplanmonthly),removeWhiteSpaces(expectedplanmonthly),"Monthly pricing is not matching");
+ 		Assert.assertEquals(removeWhiteSpaces(enterpriseplan),removeWhiteSpaces(expectedenterprise),"Enterprise policy is not matching");
  		
- 		//softAssert.assertAll();
  		
  		Thread.sleep(5000);
  		
@@ -76,8 +61,10 @@ public void	Chatcheck() throws InterruptedException{
  		
      	String yearlyplan=	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div[3]/div[1]")).getText();
  		
- 	softAssert.assertEquals(yearlyplan,expectedyearlyplan,"Yearly pricing is not matching");
+ 	Assert.assertEquals(removeWhiteSpaces(yearlyplan),removeWhiteSpaces(expectedyearlyplan),"Yearly pricing is not matching");
       }
 	
-	
+String removeWhiteSpaces(String input) {
+    return input.replaceAll("\\s+", "");
+}
 }

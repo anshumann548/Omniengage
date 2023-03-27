@@ -29,28 +29,53 @@ public class Audiencetrigger extends audiencenode {
 		this.driver.findElement(By.xpath("//*[@id=\"cb\"]")).sendKeys("Bot" + Math.random() * 4);
 		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[1]/div/div[1]/div[3]/div/div/button\n")).click();
 		Thread.sleep(5000);
-                                //Creating another bot to send segment
-		
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"node-5\"]/div[3]/div")));
 
-		WebElement msgnode = this.driver.findElement(By.xpath("//*[@id=\"node-5\"]/div[3]/div"));
-        act.dragAndDropBy(msgnode, -200, 90).build().perform();
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[3]/div[1]/div[2]/div[10]")).click(); // getting the segment node
-	
+		//Creating another bot to send segment
 		
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[4]/div/div/div[2]/button")).click(); // clicking on pop-up of alert after adding segment  
+		
+		
+		WebElement segmentnode = this.driver.findElement(By.xpath("//*[@id=\"reverse-bar\"]/div[2]/div/div[1]/table/tbody/tr[5]/td[2]/div"));
+		WebElement tocanvas1 = this.driver.findElement(By.xpath("//*[@id=\"drawflow\"]/div[2]"));
+		
+		final String java_script4 =
+	            "var src=arguments[0],tgt=arguments[1];var dataTransfer={dropEffe" +
+	            "ct:'',effectAllowed:'all',files:[],items:{},types:[],setData:fun" +
+	            "ction(format,data){this.items[format]=data;this.types.append(for" +
+	            "mat);},getData:function(format){return this.items[format];},clea" +
+	            "rData:function(format){}};var emit=function(event,target){var ev" +
+	            "t=document.createEvent('Event');evt.initEvent(event,true,false);" +
+	            "evt.dataTransfer=dataTransfer;target.dispatchEvent(evt);};emit('" +
+	            "dragstart',src);emit('dragenter',tgt);emit('dragover',tgt);emit(" +
+	            "'drop',tgt);emit('dragend',src);";
+		
+		((JavascriptExecutor)driver).executeScript(java_script4, segmentnode, tocanvas1);
+		
+		//Got segment node
+		
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[4]/div/div/div[2]/button")).click();
+		//Dismissed pop up 
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"phone\"]/div")));//*[@id="phone"]/div/div/div[1]/div/div[1]
+		WebElement segmentdrag = this.driver.findElement(By.xpath("//*[@id=\"phone\"]/div")); 
+        act.dragAndDropBy(segmentdrag, 200, 350).build().perform();
+      
+		//Repositioned segment node
+
 		this.driver.findElement(By.xpath("//*[@id=\"phone\"]/div/div/div[1]/div/div[2]")).click();  // clicking over node normally
+		
 		Thread.sleep(3000);
 		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div[2]/div/button[1]")).click();// first
 																													// node// maker
 		Thread.sleep(3000);
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[2]/div/div[1]/div[2]/div/div"))
-				.click();  //clicking over field to get expanded dd
+		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[2]/div/div[1]/div[2]/div/div")).click(); 
+		
+		//clicking over field to get expanded dd
+		
 		Thread.sleep(4000);
 
 		List<WebElement> botlist = wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(
 				By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[2]/div/div[1]/div[2]/div/div/div/ul/li")));
+		
 		Thread.sleep(3000); //getting all the elements of dd i.e. bot list
 
 		for (WebElement element : botlist) {
@@ -63,16 +88,41 @@ public class Audiencetrigger extends audiencenode {
 			}
 		}
 
-		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"node-6\"]/div[3]/div")));
-		WebElement audiencenode = this.driver.findElement(By.xpath("//*[@id=\"node-6\"]/div[3]/div"));
-        act.dragAndDropBy(audiencenode, 200, 90).build().perform();
-		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[3]/div[1]/div[2]/div[12]\n")).click(); // getting the send email node
+		Thread.sleep(3000);
 
 		
+		WebElement sendemailnode = this.driver.findElement(By.xpath("//*[@id=\"trigger\"]/tbody/tr[1]/td[1]/div"));
+		WebElement tocanvas2 = this.driver.findElement(By.xpath("//*[@id=\"drawflow\"]/div[2]"));
 		
-		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='sendEmail-head']")));
-		this.driver.findElement(By.xpath("//*[@class='sendEmail-head']")).click();  // clicking over email receiver's field
+		final String java_script5 =
+	            "var src=arguments[0],tgt=arguments[1];var dataTransfer={dropEffe" +
+	            "ct:'',effectAllowed:'all',files:[],items:{},types:[],setData:fun" +
+	            "ction(format,data){this.items[format]=data;this.types.append(for" +
+	            "mat);},getData:function(format){return this.items[format];},clea" +
+	            "rData:function(format){}};var emit=function(event,target){var ev" +
+	            "t=document.createEvent('Event');evt.initEvent(event,true,false);" +
+	            "evt.dataTransfer=dataTransfer;target.dispatchEvent(evt);};emit('" +
+	            "dragstart',src);emit('dragenter',tgt);emit('dragover',tgt);emit(" +
+	            "'drop',tgt);emit('dragend',src);";
+		
+		((JavascriptExecutor)driver).executeScript(java_script5, sendemailnode, tocanvas2);
+
+		//Got send email node
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='node-outer sendEmail-box']")));
+		WebElement sendemaildrag = this.driver.findElement(By.xpath("//*[@class='node-outer sendEmail-box']"));
+        act.dragAndDropBy(sendemaildrag, 200, 450).build().perform();
+
+       //Repositioned Send email node
+        
+        WebElement segmentnodeoutput = this.driver.findElement(By.xpath("//*[@id=\"node-6\"]/div[3]/div"));
+		WebElement sendemailnodeinput = this.driver.findElement(By.xpath("//*[@id=\"node-7\"]/div[1]/div"));
+		act.dragAndDrop(segmentnodeoutput, sendemailnodeinput).build().perform();	
+		
+		//Connected both above dragged nodes
+		
+	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='node-outer sendEmail-box']")));
+		this.driver.findElement(By.xpath("//*[@class='node-outer sendEmail-box']")).click();  // clicking over email receiver's field
 		Thread.sleep(3000);
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[2]/div/div/input"))
 				.click();   // email reciever config setting
@@ -142,11 +192,14 @@ public class Audiencetrigger extends audiencenode {
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[2]/div/div[2]/div[2]")).click();
 		// Selecting time to send campaign
 
+		Thread.sleep(3000);
+
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div/div[4]")).click(); // Publishing bot
 	
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[2]/div/button[2]\n")).click();
 		// Sending campaign
+		Thread.sleep(3000);
 	}
 }

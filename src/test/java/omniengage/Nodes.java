@@ -72,8 +72,8 @@ public class Nodes {
 		// inverse calling hierarchy
 
 		obj.Loginpage(this.driver);
-		obj.BotmakerNode();
-		obj.dragndropNode();
+     	obj.BotmakerNode();
+	    obj.dragndropNode();
 		obj.inserter();
 		obj.livebotopener();
 		obj.botsolver();

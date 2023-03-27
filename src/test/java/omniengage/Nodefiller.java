@@ -92,33 +92,19 @@ public class Nodefiller extends dragndropnode {
 		
 		driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div[3]/div[1]/textarea")).sendKeys("20*20");
 	
-	//	driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[4]/div/div[3]/div[3]/div/div/label/span")).click();
 //Filling calculate result node
 		
 	    Thread.sleep(2000);
-//		
-//		robo.keyPress(KeyEvent.VK_TAB);
-//		robo.keyRelease(KeyEvent.VK_TAB);
-//
-//		robo.keyPress(KeyEvent.VK_TAB);
-//		robo.keyRelease(KeyEvent.VK_TAB);
-//
-//		
-//		robo.keyPress(KeyEvent.VK_ENTER);
-//		robo.keyRelease(KeyEvent.VK_ENTER);
-//
-//		Thread.sleep(5000);
 		
 		driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[4]/div/div[3]/button")).click();
 		
 //Saving calculate result node
-		Thread.sleep(2000);
-	
-		
-		
-		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[2]/div[2]/div/div[4]")).click();
 
+		Thread.sleep(4000);
 	
+this.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[2]/div[2]/div/div[4]")).click();
+
+		
 	
 	}
 

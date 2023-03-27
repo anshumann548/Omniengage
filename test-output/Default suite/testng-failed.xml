@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="omniengage.Nodes">
+      <class name="omniengage.dragndropnode">
         <methods>
-          <include name="controller"/>
-          <include name="setup"/>
+          <include name="BotmakerNode"/>
+          <include name="dragndropNode"/>
+          <include name="Loginpage"/>
         </methods>
-      </class> <!-- omniengage.Nodes -->
+      </class> <!-- omniengage.dragndropnode -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
