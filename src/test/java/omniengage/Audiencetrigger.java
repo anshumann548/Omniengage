@@ -28,16 +28,11 @@ public class Audiencetrigger extends audiencenode {
 		
 		//Getting on dashboard
 		
-	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='default-card ']")));
-		//driver.findElement(By.xpath("//*[@class='default-card ']")).click();
-		//Thread.sleep(1000);
-		this.driver.findElement(By.xpath("//*[@placeholder='Enter Workflow Name']")).sendKeys("Bot" + Math.random() * 5);//*[@id="cb"]
+		this.driver.findElement(By.xpath("//*[@placeholder='Enter Workflow Name']")).sendKeys("Bot" + Math.random() * 5);
 		this.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[2]/div[2]/div[1]/div/div[1]/div[4]/button")).click();		
 		Thread.sleep(4000);
 
 		//Creating another bot to send segment
-		
-		
 		
 		WebElement segmentnode = this.driver.findElement(By.xpath("//*[@id=\"reverse-bar\"]/div[2]/div/div[1]/table/tbody/tr[5]/td[2]/div"));
 		WebElement tocanvas1 = this.driver.findElement(By.xpath("//*[@id=\"drawflow\"]/div[2]"));

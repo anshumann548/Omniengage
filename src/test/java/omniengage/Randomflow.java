@@ -22,7 +22,7 @@ public class Randomflow extends Chatanalytics{
 public void randomizer() throws InterruptedException
 
 {
-	Thread.sleep(3000);
+	Thread.sleep(2000);
 	WebDriverWait wait = new WebDriverWait(this.driver, Duration.ofMillis(30000));
 
 	
