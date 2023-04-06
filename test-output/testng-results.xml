@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-27T17:14:41 IST" name="TestSuite" finished-at="2023-03-27T17:17:03 IST" duration-ms="142346">
+  <suite started-at="2023-04-06T09:02:01 CDT" name="TestSuite" finished-at="2023-04-06T09:02:34 CDT" duration-ms="32779">
     <groups>
     </groups>
-    <test started-at="2023-03-27T17:14:41 IST" name="ChromeTest" finished-at="2023-03-27T17:16:56 IST" duration-ms="134565">
+    <test started-at="2023-04-06T09:02:01 CDT" name="ChromeTest" finished-at="2023-04-06T09:02:34 CDT" duration-ms="32582">
       <class name="omniengage.Nodes">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:omniengage.Nodes@169e6180]" started-at="2023-03-27T17:14:41 IST" name="setup" finished-at="2023-03-27T17:14:47 IST" duration-ms="6085" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:omniengage.Nodes@169e6180]" started-at="2023-04-06T09:02:01 CDT" name="setup" finished-at="2023-04-06T09:02:07 CDT" duration-ms="6137" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="controller()[pri:0, instance:omniengage.Nodes@169e6180]" started-at="2023-03-27T17:14:47 IST" name="controller" finished-at="2023-03-27T17:16:56 IST" duration-ms="128460" status="PASS">
+        <test-method signature="controller()[pri:0, instance:omniengage.Nodes@169e6180]" started-at="2023-04-06T09:02:07 CDT" name="controller" finished-at="2023-04-06T09:02:34 CDT" duration-ms="26423" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- controller -->
       </class> <!-- omniengage.Nodes -->
     </test> <!-- ChromeTest -->
-    <test started-at="2023-03-27T17:14:41 IST" name="EdgeTest" finished-at="2023-03-27T17:16:56 IST" duration-ms="134746">
+    <test started-at="2023-04-06T09:02:01 CDT" name="EdgeTest" finished-at="2023-04-06T09:02:34 CDT" duration-ms="32779">
       <class name="omniengage.Nodes">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:omniengage.Nodes@550dbc7a]" started-at="2023-03-27T17:14:41 IST" name="setup" finished-at="2023-03-27T17:14:47 IST" duration-ms="6085" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:omniengage.Nodes@957e06]" started-at="2023-04-06T09:02:01 CDT" name="setup" finished-at="2023-04-06T09:02:07 CDT" duration-ms="6137" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,30 +37,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="controller()[pri:0, instance:omniengage.Nodes@550dbc7a]" started-at="2023-03-27T17:14:47 IST" name="controller" finished-at="2023-03-27T17:16:56 IST" duration-ms="128644" status="PASS">
+        <test-method signature="controller()[pri:0, instance:omniengage.Nodes@957e06]" started-at="2023-04-06T09:02:07 CDT" name="controller" finished-at="2023-04-06T09:02:34 CDT" duration-ms="26623" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- controller -->
       </class> <!-- omniengage.Nodes -->
     </test> <!-- EdgeTest -->
-    <test started-at="2023-03-27T17:14:41 IST" name="FirefoxTest" finished-at="2023-03-27T17:17:03 IST" duration-ms="142346">
-      <class name="omniengage.Nodes">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:omniengage.Nodes@957e06]" started-at="2023-03-27T17:14:41 IST" name="setup" finished-at="2023-03-27T17:14:48 IST" duration-ms="7080" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="controller()[pri:0, instance:omniengage.Nodes@957e06]" started-at="2023-03-27T17:14:48 IST" name="controller" finished-at="2023-03-27T17:17:03 IST" duration-ms="135260" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- controller -->
-      </class> <!-- omniengage.Nodes -->
-    </test> <!-- FirefoxTest -->
   </suite> <!-- TestSuite -->
 </testng-results>

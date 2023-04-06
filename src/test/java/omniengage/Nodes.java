@@ -66,7 +66,7 @@ public class Nodes {
 	}
 	public void controller() throws InterruptedException, AWTException {
 
-		Chatanalytics obj = new Chatanalytics();
+		Randomflow obj = new Randomflow();
 
 		// functions called,you have to call the last function at first to create
 		// inverse calling hierarchy
@@ -80,5 +80,6 @@ public class Nodes {
 		obj.audienceopener();
 		obj.rfopener();
 	    obj.Chatcheck();
+	    obj.randomizer();
 	}
 }

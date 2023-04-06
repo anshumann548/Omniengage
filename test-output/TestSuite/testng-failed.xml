@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="10" parallel="tests" name="Failed suite [TestSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="10" parallel="tests" name="EdgeTest(failed)">
-    <parameter name="browser" value="Edge"/>
-    <classes>
-      <class name="omniengage.Nodes">
-        <methods>
-          <include name="controller"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- omniengage.Nodes -->
-    </classes>
-  </test> <!-- EdgeTest(failed) -->
   <test thread-count="10" parallel="tests" name="ChromeTest(failed)">
     <parameter name="browser" value="Chrome"/>
     <classes>
@@ -23,8 +12,8 @@
       </class> <!-- omniengage.Nodes -->
     </classes>
   </test> <!-- ChromeTest(failed) -->
-  <test thread-count="10" parallel="tests" name="FirefoxTest(failed)">
-    <parameter name="browser" value="Firefox"/>
+  <test thread-count="10" parallel="tests" name="EdgeTest(failed)">
+    <parameter name="browser" value="Edge"/>
     <classes>
       <class name="omniengage.Nodes">
         <methods>
@@ -33,5 +22,5 @@
         </methods>
       </class> <!-- omniengage.Nodes -->
     </classes>
-  </test> <!-- FirefoxTest(failed) -->
+  </test> <!-- EdgeTest(failed) -->
 </suite> <!-- Failed suite [TestSuite] -->

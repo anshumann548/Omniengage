@@ -75,7 +75,6 @@ public class dragndropnode extends Botmaker {
 		
 		((JavascriptExecutor)driver).executeScript(java_script2, fromagainnext, tonext);
 
-		//Resultnode
 		
 		WebElement resultnode = this.driver.findElement(By.xpath("//*[@id=\"reverse-bar\"]/div[2]/div/div[1]/table/tbody/tr[4]/td[1]/div"));
 		WebElement tocanvas = this.driver.findElement(By.xpath("//*[@id=\"drawflow\"]/div[2]"));
@@ -135,7 +134,8 @@ public class dragndropnode extends Botmaker {
 		WebElement resultnodeinput = this.driver.findElement(By.xpath("//*[@id=\"node-9\"]/div[1]/div"));
 		act.dragAndDrop(buttonnode3output, resultnodeinput).build().perform();
 		
-				
+		
+		
 	}
 
 }
