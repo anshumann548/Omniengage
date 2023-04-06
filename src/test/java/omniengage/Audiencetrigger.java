@@ -22,15 +22,18 @@ public class Audiencetrigger extends audiencenode {
 
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div[3]/div[2]/div[2]/div[3]/div[2]/div/div")));
 		this.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[2]/div[2]/div[3]/div[2]/div/div")).click();
+		
+		
 		Thread.sleep(3000); 
 		
 		//Getting on dashboard
 		
-		
-		
-		this.driver.findElement(By.xpath("//*[@id=\"cb\"]")).sendKeys("Bot" + Math.random() * 4);
-		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[1]/div/div[1]/div[3]/div/div/button\n")).click();
-		Thread.sleep(5000);
+	//	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='default-card ']")));
+		//driver.findElement(By.xpath("//*[@class='default-card ']")).click();
+		//Thread.sleep(1000);
+		this.driver.findElement(By.xpath("//*[@placeholder='Enter Workflow Name']")).sendKeys("Bot" + Math.random() * 5);//*[@id="cb"]
+		this.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[2]/div[2]/div[1]/div/div[1]/div[4]/button")).click();		
+		Thread.sleep(4000);
 
 		//Creating another bot to send segment
 		

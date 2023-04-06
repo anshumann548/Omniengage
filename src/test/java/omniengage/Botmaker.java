@@ -21,11 +21,9 @@ public class Botmaker extends Login{
 	    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[3]/div[2]/div/div")));
 		
 		
-		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[3]/div[2]/div/div")).click();
-		this.driver.findElement(By.xpath("//*[@id=\'cb\']")).click();
+	    driver.findElement(By.xpath("//*[@class='default-card ']")).click();	
 		this.driver.findElement(By.xpath("//*[@id=\'cb\']")).sendKeys("Bot" + Math.random() * 5);
-		this.driver.findElement(By.xpath("//*[@id=\'root\']/div/div[3]/div[2]/div[2]/div[1]/div/div[1]/div[3]/div/div/button\n")).click();
-	
+		this.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[2]/div[2]/div[1]/div/div[1]/div[4]/button")).click();	
 		Thread.sleep(5000);
 	}
 

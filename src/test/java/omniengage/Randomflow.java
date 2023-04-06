@@ -24,7 +24,11 @@ public void randomizer() throws InterruptedException
 {
 	Thread.sleep(3000);
 	WebDriverWait wait = new WebDriverWait(this.driver, Duration.ofMillis(30000));
+
 	
+	driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div[1]/div")).click();
+	
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='default-card ']")));	
 	driver.findElement(By.xpath("//*[@class='default-card ']")).click();	
 	this.driver.findElement(By.xpath("//*[@id=\'cb\']")).sendKeys("Bot" + Math.random() * 5);
 	this.driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[3]/div[2]/div[2]/div[1]/div/div[1]/div[4]/button")).click();
@@ -152,10 +156,10 @@ int y8 = Node8Location.getY();
 act.dragAndDropBy(sendmsgnode, (x8+20), (y8+450)).build().perform();
 
  List<String[]> outputlist = new ArrayList<>(); 
- List<String> inputlist = new ArrayList<>(); 
- List<WebElement> outWbList = new ArrayList<>();
- List<WebElement> inWbList = new ArrayList<>();
- int ind  =0;
+// List<String> inputlist = new ArrayList<>(); 
+// List<WebElement> outWbList = new ArrayList<>();
+// List<WebElement> inWbList = new ArrayList<>();
+// int ind  =0;
 
 		 outputlist.add(new String[]{"//*[@id=\"node-6\"]/div[3]/div","//*[@id=\"node-6\"]/div[1]/div","//*[@id=\"node-6\"]/div[2]/div"}); 
 		 outputlist.add(new String[]{"//*[@id=\"node-7\"]/div[2]/div/div[2]/div[2]/div/div[2]","//*[@id=\"node-7\"]/div[1]/div","//*[@id=\"node-7\"]/div[2]/div"});
